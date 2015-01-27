@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/',function()
+/*Route::get('/',function()
 {
     $users = DB::table('users')->get();
     return $users;
 });
+*/
+Route::get('/', 'PagesController@home');
+Route::get('/index','PagesController@home');
+Route::get('/edit','PagesController@edit');
+Route::get('/about', 'PagesController@about');
 ?>
