@@ -9,7 +9,8 @@
 <hr />
 <div id="tabs">
   <ul>
-    <li><a href="/"><span>Login/Logout</span></a></li>
+    <li><a href="/"><span>Login</span></a></li>
+    <li><a href="/"><span>Logout</span></a></li>
     <li><a href="edit"><span>Edit Profile</span></a></li>
     <li><a href="about"><span>About</span></a></li>
     <li><a href="wiiu"><span>Wii U</span></a></li>

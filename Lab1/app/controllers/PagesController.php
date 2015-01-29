@@ -6,6 +6,11 @@ public function home(){
 	return View::make('index');
 }
 
+public function out(){
+    Session::forget('userdata');
+	return View::make('index');
+}
+
 public function index(){
 	return View::make('index');
 }
@@ -32,7 +37,7 @@ public function xbox1(){
 
 public function login(){
     $users = DB::table('users')->where('username',Input::get('username'))->first();
-    if($users->Username == Input::get('username') and Hash::check(Input::get('password'),$users->Password)){
+    if($users != NULL and $users->Username == Input::get('username') and Hash::check(Input::get('password'),$users->Password)){
         Session::put('userdata',$users);
         return View::make('edit');
     }
@@ -55,6 +60,49 @@ public function register(){
         return View::make('index');
     }
 }
+
+public function name(){
+    $users = Session::get('userdata',NULL); 
+    if($users == NULL){
+        return View::make('index');
+    }
+    else{
+        DB::table('users')->where('Username',$users->Username)->update(array('Name' => Input::get('name')));
+        $users = DB::table('users')->where('username',$users->Username)->first();
+        Session::put('userdata',$users);
+        return View::make('edit');
+    }
+}
+public function email(){
+    $users = Session::get('userdata',NULL); 
+    if($users == NULL){
+        return View::make('index');
+    }
+    else{
+        DB::table('users')->where('Username',$users->Username)->update(array('Email' => Input::get('email')));
+        $users = DB::table('users')->where('username',$users->Username)->first();
+        Session::put('userdata',$users);
+        return View::make('edit');
+    }
 }
 
+public function npass(){
+    $users = Session::get('userdata',NULL); 
+    if($users == NULL){
+        return View::make('index');
+    }
+    else{
+        if(Hash::check(Input::get('conpassword'), Hash::make(Input::get('newpassword'))) and Hash::check(Input::get('oldpassword'),$users->Password)){
+            DB::table('users')->where('Username',$users->Username)->where('Password',Hash::make(Input::get('oldpassword')))->update(array('Password' => Input::get('newpassword')));
+            $users = DB::table('users')->where('username',$users->Username)->first();
+            Session::put('userdata',$users);
+        }
+        else{
+            Session::put('pass','There was an error, make sure your old password is correct and that the new passwords match.');
+       }
+        return View::make('edit');
+    }
+}
+
+}
 ?>

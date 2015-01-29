@@ -18,6 +18,7 @@
 });
 */
 Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@out');
 Route::get('/index','PagesController@index');
 Route::get('/edit','PagesController@edit');
 Route::get('/about', 'PagesController@about');
@@ -26,4 +27,7 @@ Route::get('/ps4','PagesController@ps4');
 Route::get('/xbox1','PagesController@xbox1');
 Route::post('login', array('uses' => 'PagesController@login'));
 Route::post('register', array('uses' => 'PagesController@register'));
+Route::post('newname', array('uses' => 'PagesController@name'));
+Route::post('newemail', array('uses' => 'PagesController@email'));
+Route::post('newpass', array('uses' => 'PagesController@npass'));
 ?>

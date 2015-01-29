@@ -8,13 +8,13 @@
         {{Form::open(array('url' => 'login'))}}
             {{Form::label('username','Username: ')}}
             {{Form::text('username')}}
-
+            
  
-            {{Form::label('password','Password: ')}}
-            {{Form::password('password')}}
-     
+            <p>{{Form::label('password','Password: ')}}
+            {{Form::password('password')}}<p>
+        
 
-        {{Form::submit('Log Me In!')}}
+        <p>{{Form::submit('Log Me In!')}}<p>
         {{Form::close()}}
     </div>
     <div id="register">
@@ -24,19 +24,19 @@
             {{Form::label('username','Username: ')}}
             {{Form::text('username')}}
 
-            {{Form::label('password','Password: ')}}
-            {{Form::password('password')}}
+            <p>{{Form::label('password','Password: ')}}
+            {{Form::password('password')}}<p>
 
-            {{Form::label('conpassword','Confirm Password: ')}}
-            {{Form::password('conpassword')}}
+            <p>{{Form::label('conpassword','Confirm Password: ')}}
+            {{Form::password('conpassword')}}<p>
 
-            {{Form::label('name','Name: ')}}
-            {{Form::text('name')}}
+            <p>{{Form::label('name','Name: ')}}
+            {{Form::text('name')}}<p>
 
-            {{Form::label('email','Email: ')}}
-            {{Form::text('email')}}
+            <p>{{Form::label('email','Email: ')}}
+            {{Form::email('email')}}<p>
         
-        {{Form::submit('Sign Me Up!')}}
+        <p>{{Form::submit('Sign Me Up!')}}<p>
     </div>
 </div>
 @stop
