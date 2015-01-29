@@ -21,4 +21,7 @@ Route::get('/', 'PagesController@home');
 Route::get('/index','PagesController@home');
 Route::get('/edit','PagesController@edit');
 Route::get('/about', 'PagesController@about');
+Route::get('/wiiu','PagesController@wiiu');
+Route::get('/ps4','PagesController@ps4');
+Route::get('/xbox1','PagesController@xbox1');
 ?>
