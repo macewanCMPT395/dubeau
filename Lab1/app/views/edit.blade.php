@@ -1,7 +1,18 @@
 @extends('layouts/master')
 @section('content')
 {{HTML::style(asset('css/editcss.css'))}}
+<?php
+    $users = Session::get('userdata',NULL);
+    if($users != NULL):
+?>
 <h2>Hello,<?= $users->Name;?>
+<?php
+    else:
+?>
+<h2>Please sign in,
+<?php
+    endif
+?>
 <p>This is where you can change your name, email, and password.</p>
 </h2>
 <hr>
