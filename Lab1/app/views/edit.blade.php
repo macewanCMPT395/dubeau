@@ -1,7 +1,7 @@
 @extends('layouts/master')
 @section('content')
 {{HTML::style(asset('css/editcss.css'))}}
-<h2>Hello,
+<h2>Hello,<?= $users->Name;?>
 <p>This is where you can change your name, email, and password.</p>
 </h2>
 <hr>
