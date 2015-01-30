@@ -30,4 +30,5 @@ Route::post('register', array('uses' => 'PagesController@register'));
 Route::post('newname', array('uses' => 'PagesController@name'));
 Route::post('newemail', array('uses' => 'PagesController@email'));
 Route::post('newpass', array('uses' => 'PagesController@npass'));
+Route::post('blog', array('uses' => 'PagesController@blog'));
 ?>

@@ -2,7 +2,8 @@
 {{HTML::style(asset('css/gamecss.css'))}}
 @section ('content')
 <?php
-    $system = ps4;
+    $system = array('ps4');
+    Session::put('syst','ps4');
     $users = Session::get('userdata',NULL);
 ?>
 <div id='title'>
@@ -12,14 +13,24 @@
 <div id='wrap'>
     <div id='postbox'>
         <p>Write your post here!</p>
-        {{Form::open()}}
+        {{Form::open(array('url' => 'blog'))}}
             {{Form::textarea('post')}}
+        <p>{{Form::submit('Post It!')}}<p>
         {{Form::close()}}
-        {{Form::submit('Post It!')}}
     </div>
 
     <div id='posts'>
-        <p>Connect to the databse for the posts here.</p>
+    <?php
+        $users = DB::select('select * from Blogs where system = ?',$system);
+        for($x = count($users); $x > 0; $x--):
+            $post = $users[$x-1];
+    ?>
+        <p><?= $post->Entry?></p>
+        <p>Authored by <?= $post->Name?><p>
+        <p>------------------------------------------------------<p>
+    <?php
+        endfor;
+    ?>
     </div>
 </div>
             

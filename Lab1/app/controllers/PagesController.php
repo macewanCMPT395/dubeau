@@ -104,5 +104,17 @@ public function npass(){
     }
 }
 
+public function blog(){
+    $users = Session::get('userdata',NULL); 
+    $syst = Session::get('syst',NULL);
+    if($users == NULL){
+        return View::make('index');
+    }
+    elseif(Input::get('post') != ''){
+        DB::table('Blogs')->insert(array('Name' => $users->Name, 'Entry' => Input::get('post'), 'system' =>$syst));
+    }
+    return View::make($syst);
+    
+}
 }
 ?>
