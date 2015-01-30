@@ -5,7 +5,7 @@ body {
 
 h1 {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:20px;
+	font-size:30px;
 	font-weight:bold;
 	margin:0;
 	padding-left:50px;
@@ -22,7 +22,7 @@ hr {
 	float:left;
 	width:100%;
 	background:#efefef;
-	font-size:93%;
+	font-size:150%;
 	line-height:normal;
 	border-bottom:1px solid #666;
 	}

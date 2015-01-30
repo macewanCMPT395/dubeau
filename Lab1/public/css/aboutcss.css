@@ -1,0 +1,19 @@
+ul {
+    margin:0;
+	padding:10px 10px 0 50px;
+	list-style:disc;
+	}
+	
+li {
+	margin:0;
+	font-size:15px;
+	padding:0;
+	}
+
+h4 {
+    font-size:15px;
+    }
+
+#writing {
+    font-size:18px;
+    }
