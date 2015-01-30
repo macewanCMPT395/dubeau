@@ -1,6 +1,10 @@
 @extends ('layouts/master')
 {{HTML::style(asset('css/gamecss.css'))}}
 @section ('content')
+<?php
+    $system = ps4;
+    $users = Session::get('userdata',NULL);
+?>
 <div id='title'>
     This is the Playstation 4 forum. Please keep posts on-topic.
 </div>
