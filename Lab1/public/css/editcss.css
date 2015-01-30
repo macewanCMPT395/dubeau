@@ -1,6 +1,9 @@
-body {
-	font: bold 11px/1.5em Verdana;
-	background-color: #EFEFEF;
+#edit {
+	background-image:url('../images/image2.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	min-height: 100%
 	}
 
 h1 {

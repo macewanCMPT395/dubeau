@@ -6,6 +6,7 @@
     Session::put('syst','xbox1');
     $users = Session::get('userdata',NULL);
 ?>
+<body id='xbox'>
 <div id='title'>
     This is the Xbox One forum. Please keep posts on-topic.
 </div>
@@ -33,5 +34,5 @@
     ?>
     </div>
 </div>
-            
+</body>
 @stop
