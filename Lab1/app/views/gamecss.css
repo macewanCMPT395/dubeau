@@ -1,5 +1,10 @@
 body {
 	font: bold 11px/1.5em Verdana;
+	background-image:url('./images/image.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-origin:content box;
+	background-size: 100% 100%;
 	}
 
 h1 {
@@ -29,3 +34,4 @@ h1 {
     padding:10px;
     width:50%;
     }
+

@@ -6,6 +6,7 @@
     Session::put('syst','wiiu');
     $users = Session::get('userdata',NULL);
 ?>
+<body id='wiiu'>
 <div id='title'>
         This is the Wii U forum. Please keep posts on-topic.
 </div>
@@ -33,5 +34,5 @@
     ?>
     </div>
 </div>
-            
+</body>           
 @stop

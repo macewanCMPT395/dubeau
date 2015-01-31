@@ -1,6 +1,7 @@
 @extends('layouts/master')
-@section('content')
 {{HTML::style(asset('css/aboutcss.css'))}}
+@section('content')
+<body id ='about'>
 	<div id='writing'>
 	    <p> This website is a community forum for discussions on the current generation of video game consoles.
 	    Users can post about anything, so long as it is related to the current board.</p> <p>Guests will not be able to post
@@ -24,4 +25,5 @@
 	<h4>If you are caught breaking these rules, we'll delete your account. Just don't do it.</h4></p>
 	
 	<p>Copyright 2015 by Adam Sykes and Chris Dubeau. All rights reserved.</p>
+</body>
 @stop

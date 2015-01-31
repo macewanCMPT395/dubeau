@@ -1,3 +1,9 @@
+#about {
+	background-image:url('../images/image3.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	}
 ul {
     margin:0;
 	padding:10px 10px 0 50px;

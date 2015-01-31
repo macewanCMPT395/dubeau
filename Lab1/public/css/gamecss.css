@@ -1,7 +1,31 @@
 body {
-	font: bold 11px/1.5em Verdana;
+	background-image:url('../images/image.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-origin:content box;
+	background-size: 100% 100%;
 	}
-
+#xbox {
+	background-image:url('../images/Xbox.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-origin:content box;
+	background-size: 100% 100%;
+	}
+#wiiu {
+	background-image:url('../images/Wiiu.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-origin:content box;
+	background-size: 100% 100%;
+	}
+#ps4 {
+	background-image:url('../images/Ps4.jpg');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-origin:content box;
+	background-size: 100% 100%;
+	}
 h1 {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:30px;
@@ -33,6 +57,7 @@ h1 {
     }
 
 #posts {
+    color: #0f0f0f;
     float:left;
     font-size:15px;
     padding:10px;

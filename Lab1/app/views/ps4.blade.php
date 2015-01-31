@@ -6,6 +6,7 @@
     Session::put('syst','ps4');
     $users = Session::get('userdata',NULL);
 ?>
+<body id='ps4'>
 <div id='title'>
     This is the Playstation 4 forum. Please keep posts on-topic.
 </div>
@@ -33,5 +34,5 @@
     ?>
     </div>
 </div>
-            
+</body>      
 @stop

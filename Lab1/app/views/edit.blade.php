@@ -1,6 +1,7 @@
 @extends('layouts/master')
-@section('content')
 {{HTML::style(asset('css/editcss.css'))}}
+@section('content')
+<body id = 'edit'>
 <?php
     $users = Session::get('userdata',NULL);
     $pass = Session::get('pass','HAH, Like we would show you.');
@@ -59,4 +60,5 @@
         {{Form::close()}}
     </div>
 </div>
+</body>
 @stop

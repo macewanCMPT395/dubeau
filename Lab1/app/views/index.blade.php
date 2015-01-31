@@ -1,6 +1,7 @@
 @extends('layouts/master')
 {{HTML::style(asset('css/logincss.css'))}}
 @section('content')
+<body>
 <div id="wrap">
     <div id="login">
         <h2>Log In</h2>
@@ -39,4 +40,5 @@
         <p>{{Form::submit('Sign Me Up!')}}<p>
     </div>
 </div>
+</body>
 @stop
